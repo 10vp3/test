@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mon Jeu</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.min.js"></script>
+</head>
+<body>
+    <script>
+        var config = {
+            type: Phaser.AUTO,
+            width: 800,
+            height: 600,
+            scene: {
+                preload: preload,
+                create: create,
+                update: update
+            }
+        };
+
+        var player;
+
+        var game = new Phaser.Game(config);
+
+        function preload() {
+            this.load.image('player', 'path/to/player/image.png');
+        }
+
+        function create() {
+            player = this.add.sprite(400, 300, 'player');
+        }
+
+        function update() {
+            // Game update logic here
+        }
+    </script>
+</body>
+</html>
